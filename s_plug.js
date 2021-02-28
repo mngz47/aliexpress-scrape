@@ -7,6 +7,8 @@ const app = express();
 const port = 80;
 
 var router = app.Router();
+
+/*
 router.post('/', function(req, res) {
 var sent_data = req.body;
 	
@@ -16,6 +18,7 @@ product.then(rres => {
 	res.send(rres);
 });	
 });	
+*/
 
 router.get('/', function(req, res) {
 	res.sendFile('test.html');
