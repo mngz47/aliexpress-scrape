@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Scrape Test</title>
+</head>
+<body>
+<script src=https://productlists.co.za/feature/aggregation/lite/api.js ></script>
+<script src=plug.js ></script>
+<h3>Ali_id</h3>
+<input id=ali_id type=text />
+<button onclick="fetch();return false;" >fetch</button>
+<div id=log ></div>
+<script>
+
+function fetch(){
+ var res = setScrape(e('ali_id').value);
+ 
+ res.onload = function(){
+ product = res.responseText;
+ e('log').innerHTML += getAliProductTitle()+'<br>';
+ e('log').innerHTML += getAliProductDescription()+'<br>';
+ e('log').innerHTML += getAliProductFeedback()+'<br>';
+   
+ };
+}
+
+</script>
+</body>
+</html>
